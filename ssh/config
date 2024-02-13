@@ -1,0 +1,4 @@
+Host *
+    User rdhar
+    host i-* mi-*
+    ProxyCommand sh -c "aws ssm start-session --region us-east-1 --document-name AWS-StartSSHSession --target %h --parameters 'portNumber=%p'"
