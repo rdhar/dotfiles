@@ -1,0 +1,9 @@
+#!/bin/sh
+
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR="nano"
+else
+  export EDITOR="code-insiders --wait --new-window"
+fi
+export VISUAL="$EDITOR"
+export GIT_EDITOR="$EDITOR"
