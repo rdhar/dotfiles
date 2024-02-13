@@ -1,13 +1,59 @@
-*.tar
-*.tar.*
-*.jar
+# Sources
+- https://github.com/github/gitignore
+- https://toptal.com/developers/gitignore
+
+## Linux
+.directory
+.fuse_hidden*
+.nfs*
+.Trash-*
+*~
+secring.*
+
+## Mac
+._*
+.apdisk
+.AppleDB
+.AppleDesktop
+.AppleDouble
+.com.apple.timemachine.donotpresent
+.DocumentRevisions-V100
+.DS_Store
+.fseventsd
+.LSOverride
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+*.icloud
+Icon
+Network Trash Folder
+Temporary Items
+
+## Windows
+[Dd]esktop.ini
+*.cab
+*.lnk
+*.msix
+*.msm
+*.msp
+*.stackdump
+$RECYCLE.BIN/
+ehthumbs_vista.db
+ehthumbs.db
+Thumbs.db
+Thumbs.db:encryptable
+
+## Packages
 *.exe
-*.msi
-*.zip
-*.tgz
+*.jar
 *.log
 *.log.*
+*.msi
 *.sig
-
+*.tar
+*.tar.*
+*.tgz
+*.zip
 pkg/
 src/
