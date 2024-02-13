@@ -1,0 +1,32 @@
+[alias]
+    forget = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -D
+    forgetlist = !git fetch -p && git branch -vv | awk '/: gone]/{print $1}'
+    nah = "!f(){ git reset --hard; git clean -df; if [ -d ".git/rebase-apply" ] || [ -d ".git/rebase-merge" ]; then git rebase --abort; fi; }; f"
+    uncommit = reset --soft HEAD~1
+    unstage = reset HEAD
+[commit]
+    gpgSign = true
+[core]
+    editor = code-insiders --wait --new-window
+[credential]
+    helper = cache --timeout=3600
+[diff]
+    tool = code
+[difftool "code"]
+    cmd = code-insiders --wait --new-window --diff $LOCAL $REMOTE
+[fetch]
+    prune = true
+[init]
+    defaultBranch = main
+[merge]
+    tool = code
+[mergetool "code"]
+    cmd = code-insiders --wait --new-window $MERGED
+[pull]
+    rebase = true
+[rebase]
+    autosquash = true
+    autostash = true
+[user]
+    name = Rishav Dhar
+    email = 19497993+rdhar@users.noreply.github.com
