@@ -30,5 +30,7 @@
 [user]
     name = Rishav Dhar
     email = 19497993+rdhar@users.noreply.github.com
+[url "https://username:password@github.com/"]
+    insteadOf = https://github.com/
 
 # Signed-off-by: Rishav Dhar <19497993+rdhar@users.noreply.github.com>
