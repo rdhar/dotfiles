@@ -1,4 +1,14 @@
+StrictHostKeyChecking accept-new
+
+# AWS SSM
+Host i-* mi-*
+  User rdhar
+  ProxyCommand sh -c "aws ssm start-session --region us-east-1 --document-name AWS-StartSSHSession --target %h --parameters 'portNumber=%p'"
+
+# Tucows
+Host *.<env>-<project>.<dc>.tucows.systems !maint*
+  ProxyJump maint001.<env>-<project>.<dc>.tucows.systems
+
+# Default
 Host *
-    User rdhar
-    host i-* mi-*
-    ProxyCommand sh -c "aws ssm start-session --region us-east-1 --document-name AWS-StartSSHSession --target %h --parameters 'portNumber=%p'"
+  User rdhar
