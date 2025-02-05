@@ -11,6 +11,7 @@
 [credential]
     helper = cache --timeout=3600
 [diff]
+	colorMoved = zebra
     tool = code
 [difftool "code"]
     cmd = code-insiders --wait --new-window --diff $LOCAL $REMOTE
@@ -30,7 +31,8 @@
 [user]
     name = Rishav Dhar
     email = 19497993+rdhar@users.noreply.github.com
-[url "https://username:password@github.com/"]
+    signingkey = <key>
+[url "https://<username>:<password>@github.com/"]
     insteadOf = https://github.com/
 
 # Signed-off-by: Rishav Dhar <19497993+rdhar@users.noreply.github.com>
