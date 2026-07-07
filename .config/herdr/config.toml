@@ -1,0 +1,28 @@
+onboarding = false
+
+[experimental]
+pane_history = true
+
+[keys]
+prefix = "ctrl+a"
+
+[session]
+resume_agents_on_restore = true
+
+[theme]
+auto_switch = false
+custom.accent = "#b8943a"
+name = "terminal"
+
+[ui]
+agent_panel_scope = "all"
+agent_panel_sort = "spaces"
+hide_tab_bar_when_single_tab = true
+mouse_scroll_lines = 1
+pane_gaps = false
+show_agent_labels_on_pane_borders = false
+
+[update]
+channel = "stable"
+manifest_check = true
+version_check = true
