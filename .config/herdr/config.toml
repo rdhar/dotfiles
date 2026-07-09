@@ -21,6 +21,7 @@ hide_tab_bar_when_single_tab = true
 mouse_scroll_lines = 1
 pane_gaps = false
 show_agent_labels_on_pane_borders = false
+sidebar_collapsed_mode = "hidden"
 
 [update]
 channel = "stable"
