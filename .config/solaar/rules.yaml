@@ -2,95 +2,59 @@
 ---
 - Feature: THUMB WHEEL
 - Rule:
-  - KeyIsDown: Smart Shift
-  - Test: [thumb_wheel_up, 8]
-  - KeyPress:
-    - XF86_AudioRaiseVolume
-    - click
+    - KeyIsDown: Smart Shift
+    - Test: [thumb_wheel_up, 8]
+    - KeyPress: [[XF86_AudioRaiseVolume], click]
 - Rule:
-  - KeyIsDown: Smart Shift
-  - Test: [thumb_wheel_down, 8]
-  - KeyPress:
-    - XF86_AudioLowerVolume
-    - click
+    - KeyIsDown: Smart Shift
+    - Test: [thumb_wheel_down, 8]
+    - KeyPress: [[XF86_AudioLowerVolume], click]
 - Rule:
-  - Test: [thumb_wheel_up, 12]
-  - KeyPress:
-    - [Control_L, Tab]
-    - click
+    - Test: [thumb_wheel_up, 16]
+    - KeyPress: [[[Control_L, Tab]], click]
 - Rule:
-  - Test: [thumb_wheel_down, 12]
-  - KeyPress:
-    - [Control_L, Shift_L, Tab]
-    - click
+    - Test: [thumb_wheel_down, 16]
+    - KeyPress: [[[Control_L, Shift_L, Tab]], click]
 ...
 ---
 - Rule:
-  - MouseGesture: [Back Button, Mouse Up]
-  - KeyPress:
-    - XF86_AudioRaiseVolume
-    - click
+    - MouseGesture: [Back Button, Mouse Up]
+    - KeyPress: [[Super_L, period], click]
 - Rule:
-  - MouseGesture: [Back Button, Mouse Down]
-  - KeyPress:
-    - XF86_AudioLowerVolume
-    - click
+    - MouseGesture: [Back Button, Mouse Down]
+    - KeyPress: [[Return], click]
 - Rule:
-  - MouseGesture: [Back Button, Mouse Left]
-  - KeyPress:
-    - [Control_L, Super_L, Left]
-    - click
+    - MouseGesture: [Back Button, Mouse Left]
+    - KeyPress: [[Control_L, Super_L, Left], click]
 - Rule:
-  - MouseGesture: [Back Button, Mouse Right]
-  - KeyPress:
-    - [Control_L, Super_L, Right]
-    - click
+    - MouseGesture: [Back Button, Mouse Right]
+    - KeyPress: [[Control_L, Super_L, Right], click]
 - Rule:
-  - MouseGesture: Back Button
-  - KeyPress:
-    - Right
-    - click
+    - MouseGesture: Back Button
+    - KeyPress: [[Right], click]
 ...
 ---
 - Rule:
-  - MouseGesture: [Forward Button, Mouse Up]
-  - KeyPress:
-    - XF86_Paste
-    - click
+    - MouseGesture: [Forward Button, Mouse Up]
+    - KeyPress: [[XF86_Paste], click]
 - Rule:
-  - MouseGesture: [Forward Button, Mouse Down]
-  - KeyPress:
-    - XF86_Copy
-    - click
-  - MouseGesture: [Forward Button, Mouse Left]
-  - KeyPress:
-    - XF86_Back
-    - click
+    - MouseGesture: [Forward Button, Mouse Down]
+    - KeyPress: [[XF86_Copy], click]
 - Rule:
-  - MouseGesture: [Forward Button, Mouse Right]
-  - KeyPress:
-    - XF86_Forward
-    - click
+    - MouseGesture: [Forward Button, Mouse Left]
+    - KeyPress: [[Alt_L, Left], click]
 - Rule:
-  - MouseGesture: Forward Button
-  - KeyPress:
-    - Left
-    - click
+    - MouseGesture: [Forward Button, Mouse Right]
+    - KeyPress: [[Alt_L, Right], click]
+- Rule:
+    - MouseGesture: Forward Button
+    - KeyPress: [[Left], click]
 ...
 ---
 - Rule:
-  - MouseGesture: [Mouse Gesture Button, Mouse Down]
-  - KeyPress:
-    - [Super_L, period]
-    - click
+    - Key: [Mouse Gesture Button, pressed]
+    - KeyPress: [F9, depress]
 - Rule:
-  - MouseGesture: [Mouse Gesture Button, Mouse Left]
-  - KeyPress:
-    - [Control_L, z]
-    - click
-- Rule:
-  - MouseGesture: Mouse Gesture Button
-  - KeyPress:
-    - Return
-    - click
+    - Key: [Mouse Gesture Button, released]
+    - KeyPress: [F9, release]
 ...
