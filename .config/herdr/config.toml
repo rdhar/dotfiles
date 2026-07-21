@@ -15,7 +15,6 @@ custom.accent = "#b8943a"
 name = "terminal"
 
 [ui]
-agent_panel_scope = "all"
 agent_panel_sort = "spaces"
 hide_tab_bar_when_single_tab = true
 mouse_scroll_lines = 1
