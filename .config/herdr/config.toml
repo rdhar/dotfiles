@@ -15,12 +15,12 @@ width = "80%"
 height = "80%"
 
 [theme]
-auto_switch = false
-name = "vesper"
+auto_switch = true
+dark_name = "vesper"
+light_name = "solarized-light"
 
 [theme.custom]
-# accent = "#b8943a" # kintsugi
-active_row_bg = "#282828" # vesper
+active_row_bg = "transparent"
 
 [ui]
 hide_tab_bar_when_single_tab = true
