@@ -25,8 +25,9 @@ active_row_bg = "transparent"
 [ui]
 hide_tab_bar_when_single_tab = true
 mouse_scroll_lines = 1
-pane_scrollbars = false
 pane_outer_borders = false
+pane_scrollbars = false
+prompt_new_tab_name = false
 sidebar_collapsed_mode = "hidden"
 status_indicators = "symbols"
 
@@ -60,3 +61,4 @@ version_check = true
 directory = "~/.claude/worktrees"
 
 # https://github.com/rdhar/dotfiles/blob/main/.config/herdr/config.toml
+
