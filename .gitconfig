@@ -2,7 +2,7 @@
   uncommit = reset --soft HEAD~1
   unstage = reset HEAD
 [commit]
-  gpgSign = true
+  gpgsign = true
 [column]
   ui = auto
 [credential]
@@ -11,12 +11,16 @@
   algorithm = histogram
 [fetch]
   prune = true
+[gpg]
+  format = ssh
 [init]
-  defaultBranch = main
+  defaultbranch = main
+[merge]
+  conflictstyle = zdiff3
 [pull]
   rebase = true
 [push]
-  autoSetupRemote = true
+  autosetupremote = true
   default = current
 [rebase]
   autosquash = true
@@ -24,9 +28,13 @@
 [rerere]
   enabled = true
   autoupdate = true
-[url "https://rdhar:REDACTED@github.com/"]
-  insteadOf = https://github.com/
+[tag]
+  gpgsign = true
+[url "git@github.com:"]
+  insteadof = https://github.com/
 [user]
   name = Rishav Dhar
   email = 19497993+rdhar@users.noreply.github.com
-  signingkey = 1FD924C461D2DC1E
+  signingkey = ~/.ssh/id_ed25519
+
+# https://github.com/rdhar/dotfiles/blob/main/.gitconfig
