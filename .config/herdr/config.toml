@@ -4,10 +4,11 @@ onboarding = false
 pane_history = true
 
 [keys]
+new_tab = "prefix+t"
 prefix = "ctrl+a"
 
 [[keys.command]]
-key = "prefix+t"
+key = "prefix+c"
 type = "popup"
 command = "exec \"${SHELL:-sh}\""
 description = "open scratch terminal"
@@ -19,8 +20,6 @@ auto_switch = true
 dark_name = "vesper"
 light_name = "solarized-light"
 
-[theme.custom]
-active_row_bg = "transparent"
 
 [ui]
 hide_tab_bar_when_single_tab = true
