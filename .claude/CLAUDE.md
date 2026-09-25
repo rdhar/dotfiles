@@ -19,4 +19,4 @@
   - When asked to commit, structure changes as targeted hunks so each diff clearly communicates intent.
   - Fan out tasks to sonnet subagents when appropriate to parallelize work and improve efficiency.
 
-<!-- link -->
+<!-- https://github.com/rdhar/dotfiles/blob/main/.claude/CLAUDE.md -->
