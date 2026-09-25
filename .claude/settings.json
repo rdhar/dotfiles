@@ -1,0 +1,40 @@
+{
+  "attribution": {
+    "pr": "",
+    "sessionUrl": false
+  },
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash '/home/rdhar/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true
+  },
+  "outputStyle": "Concise",
+  "modelSettings": {
+    "claude-opus-5-5": {
+      "effortLevel": "medium"
+    },
+    "claude-sonnet-5": {
+      "effortLevel": "high"
+    }
+  },
+  "promptSuggestionEnabled": false,
+  "tui": "fullscreen",
+  "theme": "auto",
+  "crossSessionInbound": "accept"
+}
