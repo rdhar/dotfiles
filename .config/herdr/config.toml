@@ -6,6 +6,7 @@ pane_history = true
 [keys]
 new_tab = "prefix+t"
 prefix = "ctrl+a"
+open_worktree = "prefix+ctrl+shift+g"
 
 [[keys.command]]
 key = "prefix+c"
@@ -19,7 +20,6 @@ height = "80%"
 auto_switch = true
 dark_name = "vesper"
 light_name = "solarized-light"
-
 
 [ui]
 hide_tab_bar_when_single_tab = true
