@@ -56,4 +56,7 @@ channel = "stable"
 manifest_check = true
 version_check = true
 
+[worktrees]
+directory = "~/.claude/worktrees"
+
 # https://github.com/rdhar/dotfiles/blob/main/.config/herdr/config.toml
