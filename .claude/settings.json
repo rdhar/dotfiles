@@ -1,40 +1,57 @@
 {
   "attribution": {
+    "commit": "Co-Authored-By: Claude <noreply@anthropic.com>",
     "pr": "",
     "sessionUrl": false
   },
-  "permissions": {
-    "defaultMode": "auto"
+  "autoMemoryEnabled": false,
+  "awaySummaryEnabled": false,
+  "crossSessionInbound": "accept",
+  "disableClaudeAiConnectors": true,
+  "enabledPlugins": {
+    "gopls-lsp@claude-plugins-official": true,
+    "modern-web-guidance@claude-plugins-official": true
   },
-  "model": "opus",
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "^(startup|resume|clear|compact|fork)$",
         "hooks": [
           {
-            "type": "command",
             "command": "bash '/home/rdhar/.claude/hooks/herdr-agent-state.sh' session",
-            "timeout": 10
+            "timeout": 10,
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "^(startup|resume|clear|compact|fork)$"
       }
     ]
   },
-  "enabledPlugins": {
-    "gopls-lsp@claude-plugins-official": true
-  },
-  "outputStyle": "Concise",
+  "maxEffortLevel": "high",
+  "model": "sonnet",
   "modelSettings": {
     "claude-opus-5-5": {
       "effortLevel": "medium"
     },
-    "claude-sonnet-5": {
-      "effortLevel": "high"
+    "claude-sonnet-5-5": {
+      "effortLevel": "medium"
     }
   },
+  "outputStyle": "Concise",
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "promptSuggestionEnabled": false,
-  "tui": "fullscreen",
+  "spinnerTipsEnabled": false,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": [
+      "Working…"
+    ]
+  },
+  "statusLine": {
+    "command": "jq -r '\"[\\(.model.display_name)/\\(.effort.level // \"-\")] ctx \\(.context_window.used_percentage // 0)% | $\\((.cost.total_cost_usd // 0) * 100 | round / 100) | cache \\(if .prompt_cache.warm then \"warm\" else \"cold\" end) \\(((.prompt_cache.hit_ratio // 0) * 100) | round)%\"'",
+    "type": "command"
+  },
   "theme": "auto",
-  "crossSessionInbound": "accept"
+  "tui": "fullscreen"
 }
