@@ -45,11 +45,12 @@
   "spinnerVerbs": {
     "mode": "replace",
     "verbs": [
-      "Working…"
+      "Working"
     ]
   },
   "statusLine": {
-    "command": "jq -r '\"[\\(.model.display_name)/\\(.effort.level // \"-\")] ctx \\(.context_window.used_percentage // 0)% | $\\((.cost.total_cost_usd // 0) * 100 | round / 100) | cache \\(if .prompt_cache.warm then \"warm\" else \"cold\" end) \\(((.prompt_cache.hit_ratio // 0) * 100) | round)%\"'",
+    "command": "jq -r 'def d(f): ((f // 0) / 60000 | floor) as $m | if $m >= 60 then \"\\($m / 60 | floor)h\\($m % 60)m\" else \"\\($m)m\" end; def sz: if . >= 1e6 then \"\\(. / 1e6)M\" else \"\\(. / 1e3 | floor)k\" end; (.cost.total_cost_usd // 0 | . * 100 | round) as $c | ((.prompt_cache.expires_at // 0) - now) as $s | (if .prompt_cache.warm and $s > 0 then \"with \\($s / 60 | floor)m warm\" else \"but cold\" end) as $k | \"\\(.model.display_name) \\(.effort.level // \"-\") · Cost $\\($c / 100 | floor).\\(\"0\\($c % 100)\"[-2:]) · Context \\(.context_window.used_percentage // 0 | round)% of \\(.context_window.context_window_size // 0 | sz)\\nCache hit \\((.prompt_cache.hit_ratio // 0) * 100 | round)% \\($k) · API \\(d(.cost.total_api_duration_ms)) of \\(d(.cost.total_duration_ms)) session\"'",
+    "refreshInterval": 60,
     "type": "command"
   },
   "theme": "auto",
