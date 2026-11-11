@@ -1,4 +1,3 @@
-# --- prompt ---
 # Sets __g to branch, short hash (detached HEAD) or worktree name; empty outside a repo.
 __git() {
 	__g=
@@ -36,6 +35,6 @@ PROMPT_COMMAND=(__prompt "${PROMPT_COMMAND[@]}")
 # PS0 runs after Enter, before the command: stores start time in µs.
 PS0+='${BASH:0:$((__t0=${EPOCHREALTIME/[.,]/},0))}'
 
-# --- history and shell options ---
+# History and shell options.
 shopt -s histappend globstar
 HISTCONTROL=ignoreboth:erasedups HISTSIZE=50000 HISTFILESIZE=50000
