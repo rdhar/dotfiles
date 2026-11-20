@@ -12,6 +12,9 @@
     "gopls-lsp@claude-plugins-official": true,
     "modern-web-guidance@claude-plugins-official": true
   },
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1"
+  },
   "hooks": {
     "SessionStart": [
       {
