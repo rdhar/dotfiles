@@ -16,6 +16,17 @@
     "CLAUDE_CODE_EXPERIMENTAL_CODE_MODE": "1"
   },
   "hooks": {
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "rtk hook claude",
+            "type": "command"
+          }
+        ],
+        "matcher": "Bash"
+      }
+    ],
     "SessionStart": [
       {
         "hooks": [
